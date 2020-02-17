@@ -1,0 +1,5 @@
+__pycache__
+demons.pid
+demons.log
+demons.db
+processes.pid

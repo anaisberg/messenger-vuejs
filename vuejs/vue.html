@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MSI chatbox</title>
+    <link rel="stylesheet" type="text/css" href="./vue.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="./vue.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Vue.js</h1>
+        <div class="messages">
+            <msg v-for="msg in messages.slice().reverse()"
+                 v-bind:message="msg[1]"
+                 v-bind:author="msg[0]"></msg>
+        </div>
+        <div class="box">
+            <h2><em>send message</em></h2>
+            <input type="text" value="username" placeholder="username" v-model="newAuthor" />
+            <div class="new-msg">
+                <input type="text" value="msg" placeholder="message" v-model="newMessage" />
+                <button v-on:click="post">></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
