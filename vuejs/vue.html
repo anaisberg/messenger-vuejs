@@ -11,8 +11,9 @@
         <h1>Vue.js</h1>
         <div class="messages">
             <msg v-for="msg in messages.slice().reverse()"
-                 v-bind:message="msg[1]"
-                 v-bind:author="msg[0]"></msg>
+                 v-bind:message="msg[0]"
+                 v-bind:author="msg[1]"
+                 v-bind:hour="msg[2]"></msg>
         </div>
         <div class="box">
             <h2><em>send message</em></h2>
